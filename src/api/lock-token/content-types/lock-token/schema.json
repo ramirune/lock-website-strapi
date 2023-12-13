@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lock_tokens",
+  "info": {
+    "singularName": "lock-token",
+    "pluralName": "lock-tokens",
+    "displayName": "Lock Token",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "lock_project": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::lock-project.lock-project",
+      "inversedBy": "lock_token"
+    },
+    "token": {
+      "type": "string"
+    },
+    "expiration": {
+      "type": "datetime"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}
